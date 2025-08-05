@@ -1,0 +1,69 @@
+{
+  "name": "nig-utils",
+  "version": "0.1.8",
+  "description": "A fully-typed, production-grade utility library for Nigerian developers",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./telco": {
+      "types": "./dist/telco/index.d.ts",
+      "import": "./dist/telco/index.mjs",
+      "require": "./dist/telco/index.js"
+    },
+    "./geo": {
+      "types": "./dist/geo/index.d.ts",
+      "import": "./dist/geo/index.mjs",
+      "require": "./dist/geo/index.js"
+    },
+    "./money": {
+      "types": "./dist/money/index.d.ts",
+      "import": "./dist/money/index.mjs",
+      "require": "./dist/money/index.js"
+    },
+    "./generators": {
+      "types": "./dist/generators/index.d.ts",
+      "import": "./dist/generators/index.mjs",
+      "require": "./dist/generators/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "nigeria",
+    "phone",
+    "telco",
+    "money",
+    "naira",
+    "utilities",
+    "typescript",
+    "library"
+  ],
+  "author": "Ademuyiwa Johnson",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuyiwaJohnson/ng-utils.git"
+  },
+  "homepage": "https://github.com/MuyiwaJohnson/ng-utils#readme",
+  "bugs": {
+    "url": "https://github.com/MuyiwaJohnson/ng-utils/issues"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}

@@ -1,0 +1,44 @@
+# Source files
+src/
+tests/
+
+# Development files
+.github/
+demo/
+.vscode/
+.idea/
+
+# Build and config files
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+
+# Development dependencies
+node_modules/
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp 
