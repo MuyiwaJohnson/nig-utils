@@ -4,24 +4,33 @@
 [![License](https://img.shields.io/npm/l/nig-utils)](https://github.com/MuyiwaJohnson/ng-utils/blob/main/LICENSE)
 [![Size](https://img.shields.io/bundlephobia/min/nig-utils)](https://bundlephobia.com/package/nig-utils)
 
-A lightweight utility library for Nigerian developers. Handles phone numbers, money formatting, and geography data.
+A fully-typed, production-grade utility library for Nigerian developers. Handles phone numbers, money formatting, and geography data with comprehensive TypeScript support.
 
-## Install
+## 🚀 Features
+
+- **📱 Phone Utilities** - Nigerian phone number validation, normalization, and telco detection
+- **💰 Money Utilities** - Naira formatting, parsing, and financial calculations
+- **🗺️ Geography Utilities** - Complete Nigerian states, LGAs, cities, and geopolitical zones data
+- **🛡️ TypeScript First** - Full TypeScript support with comprehensive type definitions
+- **📦 Tree-shakable** - Import only what you need for optimal bundle size
+- **🌐 Universal** - Works in both browser and Node.js environments
+
+## 📦 Install
 
 ```bash
 npm install nig-utils
 ```
 
-## Quick Start
+## 🎯 Quick Start
 
 ```typescript
-// Phone utilities (included in main bundle - 5KB)
+// Phone utilities (included in main bundle)
 import { normalizePhone, getTelco } from 'nig-utils';
 
-// Money utilities (3KB when imported)
+// Money utilities (separate module)
 import { formatNaira, addVAT } from 'nig-utils/money';
 
-// Geography utilities (15KB when imported)
+// Geography utilities (separate module)
 import { getStates, getLGAs } from 'nig-utils/geo';
 
 // Phone validation
@@ -39,7 +48,7 @@ getLGAs('Lagos'); // ['Ikeja', 'Victoria Island', ...]
 
 ## 📱 Phone Utilities
 
-Core phone number validation and telco detection.
+Core phone number validation and telco detection for Nigerian phone numbers.
 
 ```typescript
 import { normalizePhone, getTelco, isValidNigerianNumber } from 'nig-utils';
@@ -83,7 +92,7 @@ batchGetTelcos(['08031234567', '08051234567']);
 
 ## 💰 Money Utilities
 
-Naira formatting and currency calculations.
+Naira formatting, parsing, and financial calculations.
 
 ```typescript
 import { formatNaira, parseNaira, addVAT, removeVAT } from 'nig-utils/money';
@@ -127,7 +136,7 @@ spellOutNaira(1500); // 'One thousand, five hundred Naira only'
 
 ## 🗺️ Geography Utilities
 
-Nigerian states, LGAs, and cities data.
+Complete Nigerian states, LGAs, cities, and geopolitical zones data.
 
 ```typescript
 import { getStates, getLGAs, getCities, getGeoZones } from 'nig-utils/geo';
@@ -173,9 +182,9 @@ searchCities('lagos'); // [{ name: 'Lagos', state: 'Lagos', type: 'capital' }]
 
 ## 📦 Bundle Sizes
 
-- **Main bundle** (phone utilities only): **5KB**
-- **Money module**: **3KB** (when imported)
-- **Geography module**: **15KB** (when imported)
+- **Main bundle** (phone utilities only): **~5KB**
+- **Money module**: **~3KB** (when imported)
+- **Geography module**: **~15KB** (when imported)
 
 Import only what you need for optimal bundle size:
 
@@ -210,10 +219,11 @@ if (result.success) {
 Full TypeScript support with comprehensive types:
 
 ```typescript
-import type { PhoneInfo, TelcoProvider } from 'nig-utils';
+import type { PhoneInfo, TelcoProvider, State, City } from 'nig-utils';
 
 const phoneInfo: PhoneInfo = getPhoneInfo('08031234567');
 const telco: TelcoProvider = getTelco('08031234567');
+const stateInfo: State | null = getStateInfo('Lagos');
 ```
 
 ## 🌐 Browser & Node.js
@@ -221,10 +231,10 @@ const telco: TelcoProvider = getTelco('08031234567');
 Works in both environments:
 
 ```typescript
-// Browser
+// Browser (ES modules)
 import { normalizePhone } from 'nig-utils';
 
-// Node.js
+// Node.js (CommonJS)
 const { normalizePhone } = require('nig-utils');
 ```
 

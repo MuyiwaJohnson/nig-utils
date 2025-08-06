@@ -5,8 +5,7 @@ export default defineConfig({
     'index': 'src/index.ts',
     'telco/index': 'src/telco/index.ts',
     'geo/index': 'src/geo/index.ts',
-    'money/index': 'src/money/index.ts',
-    'generators/index': 'src/generators/index.ts'
+    'money/index': 'src/money/index.ts'
   },
   format: ['cjs', 'esm'],
   splitting: false,

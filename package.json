@@ -1,6 +1,6 @@
 {
   "name": "nig-utils",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "A fully-typed, production-grade utility library for Nigerian developers",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -30,11 +30,6 @@
       "types": "./dist/money/index.d.ts",
       "import": "./dist/money/index.mjs",
       "require": "./dist/money/index.js"
-    },
-    "./generators": {
-      "types": "./dist/generators/index.d.ts",
-      "import": "./dist/generators/index.mjs",
-      "require": "./dist/generators/index.js"
     }
   },
   "scripts": {
