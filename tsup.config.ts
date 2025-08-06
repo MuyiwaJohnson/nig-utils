@@ -12,12 +12,12 @@ export default defineConfig({
   sourcemap: false,
   clean: true,
   treeshake: true,
-  minify: false,
+  minify: true,
   external: [],
   dts: {
     resolve: true,
     compilerOptions: {
-      removeComments: true
+      removeComments: false
     }
   },
   outDir: 'dist',

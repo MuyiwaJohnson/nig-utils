@@ -6,22 +6,22 @@
 
 A fully-typed, production-grade utility library for Nigerian developers. Handles phone numbers, money formatting, and geography data with comprehensive TypeScript support.
 
-## 🚀 Features
+## Features
 
-- **📱 Phone Utilities** - Nigerian phone number validation, normalization, and telco detection
-- **💰 Money Utilities** - Naira formatting, parsing, and financial calculations
-- **🗺️ Geography Utilities** - Complete Nigerian states, LGAs, cities, and geopolitical zones data
-- **🛡️ TypeScript First** - Full TypeScript support with comprehensive type definitions
-- **📦 Tree-shakable** - Import only what you need for optimal bundle size
-- **🌐 Universal** - Works in both browser and Node.js environments
+- **Phone Utilities** - Nigerian phone number validation, normalization, and telco detection
+- **Money Utilities** - Naira formatting, parsing, and financial calculations
+- **Geography Utilities** - Complete Nigerian states, LGAs, cities, and geopolitical zones data
+- **TypeScript First** - Full TypeScript support with comprehensive type definitions
+- **Tree-shakable** - Import only what you need for optimal bundle size
+- **Universal** - Works in both browser and Node.js environments
 
-## 📦 Install
+## Install
 
 ```bash
 npm install nig-utils
 ```
 
-## 🎯 Quick Start
+## Quick Start
 
 ```typescript
 // Phone utilities (included in main bundle)
@@ -46,7 +46,7 @@ getStates(); // ['Lagos', 'Kano', ...]
 getLGAs('Lagos'); // ['Ikeja', 'Victoria Island', ...]
 ```
 
-## 📱 Phone Utilities
+## Phone Utilities
 
 Core phone number validation and telco detection for Nigerian phone numbers.
 
@@ -70,7 +70,7 @@ batchNormalizePhones(['08031234567', '08051234567']);
 batchGetTelcos(['08031234567', '08051234567']);
 ```
 
-### 📋 API Reference
+### API Reference
 
 | Function | Description | Parameters | Returns | Example |
 |----------|-------------|------------|---------|---------|
@@ -90,7 +90,7 @@ batchGetTelcos(['08031234567', '08051234567']);
 | `getTelcoInfo(provider)` | Get telco provider information | `provider: TelcoProvider` | `TelcoPrefix` | `getTelcoInfo('MTN')` → `{name: 'MTN', prefixes: [...]}` |
 | `getTelcoByPrefix(prefix)` | Get telco by prefix | `prefix: string` | `TelcoProvider \| null` | `getTelcoByPrefix('0803')` → `'MTN'` |
 
-## 💰 Money Utilities
+## Money Utilities
 
 Naira formatting, parsing, and financial calculations.
 
@@ -117,7 +117,7 @@ koboToNaira(150000); // 1500
 spellOutNaira(1500); // 'One thousand, five hundred Naira only'
 ```
 
-### 📋 API Reference
+### API Reference
 
 | Function | Description | Parameters | Returns | Example |
 |----------|-------------|------------|---------|---------|
@@ -134,7 +134,7 @@ spellOutNaira(1500); // 'One thousand, five hundred Naira only'
 | `roundToKobo(amount)` | Round to nearest Kobo | `amount: number` | `number` | `roundToKobo(1.75)` → `1.75` |
 | `formatRange(min, max, options?)` | Format price range | `min: number, max: number, options?: MoneyFormatOptions` | `string` | `formatRange(1000, 5000)` → `'₦1,000.00 - ₦5,000.00'` |
 
-## 🗺️ Geography Utilities
+## Geography Utilities
 
 Complete Nigerian states, LGAs, cities, and geopolitical zones data.
 
@@ -161,7 +161,7 @@ searchStates('lag'); // ['Lagos']
 searchCities('lagos'); // [{ name: 'Lagos', state: 'Lagos', type: 'capital' }]
 ```
 
-### 📋 API Reference
+### API Reference
 
 | Function | Description | Parameters | Returns | Example |
 |----------|-------------|------------|---------|---------|
@@ -180,7 +180,7 @@ searchCities('lagos'); // [{ name: 'Lagos', state: 'Lagos', type: 'capital' }]
 | `getZoneInfo(zone)` | Get complete zone info | `zone: string` | `GeoZone \| null` | `getZoneInfo('South West')` → `{name, states, description}` |
 | `getAllCities()` | Get all cities in Nigeria | - | `City[]` | `getAllCities()` → `[{name, state, type}, ...]` |
 
-## 📦 Bundle Sizes
+## Bundle Sizes
 
 - **Main bundle** (phone utilities only): **~5KB**
 - **Money module**: **~3KB** (when imported)
@@ -199,7 +199,7 @@ import { formatNaira } from 'nig-utils/money';
 import { getStates } from 'nig-utils/geo';
 ```
 
-## 🔧 Error Handling
+## Error Handling
 
 Safe operations that don't throw exceptions:
 
@@ -214,7 +214,7 @@ if (result.success) {
 }
 ```
 
-## 🛡️ TypeScript Support
+## TypeScript Support
 
 Full TypeScript support with comprehensive types:
 
@@ -226,7 +226,7 @@ const telco: TelcoProvider = getTelco('08031234567');
 const stateInfo: State | null = getStateInfo('Lagos');
 ```
 
-## 🌐 Browser & Node.js
+## Browser & Node.js
 
 Works in both environments:
 
@@ -238,6 +238,6 @@ import { normalizePhone } from 'nig-utils';
 const { normalizePhone } = require('nig-utils');
 ```
 
-## 📄 License
+## License
 
 MIT © [Ademuyiwa Johnson](https://github.com/MuyiwaJohnson) 

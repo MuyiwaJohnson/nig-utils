@@ -1118,11 +1118,11 @@ const GEO_ZONES: Record<string, GeoZone> = {
  * Get all Nigerian states
  *
  * @public
- * @returns Array of state names
+ * @returns Array of all Nigerian state names
  *
  * @example
  * ```typescript
- * getStates(); // ['Abia', 'Adamawa', 'Akwa Ibom', ...]
+ * getStates(); // ['Abia', 'Adamawa', 'Akwa Ibom', 'Anambra', ...]
  * ```
  */
 export function getStates(): string[] {
@@ -1234,7 +1234,7 @@ export function getGeoZones(): string[] {
  *
  * @public
  * @param state - State name
- * @returns State object with complete information
+ * @returns State object with complete information or null if not found
  *
  * @example
  * ```typescript
@@ -1244,7 +1244,7 @@ export function getGeoZones(): string[] {
  * //   capital: 'Ikeja',
  * //   geoZone: 'South West',
  * //   lgas: ['Agege', 'Ajeromi-Ifelodun', ...],
- * //   majorCities: ['Lagos', 'Ikeja', ...]
+ * //   majorCities: ['Lagos', 'Ikeja', 'Victoria Island', ...]
  * // }
  * ```
  */
